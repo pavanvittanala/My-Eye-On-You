@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="6;url=http://127.0.0.1:5000/show?query=1"/>
+  <title>Face Register</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style1.css') }}">
+    <!-- <script src="{{ url_for('static',filename='js/script.js') }}"> </script> -->
+
+</head>
+<body onload="alertUser()">
+<!-- partial:index.partial.html -->
+<div class="cam">
+              <img width="80%" src="{{ url_for('video_feed') }}">      
+</div> <!-- /form -->
+<!-- partial -->
+  <!-- <script src="{{ url_for('static',filename='js/jquery-ui.min.js') }}"></script> -->
+  <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='js/script.js') }}"> </script>
+  <script>
+function alertUser() {
+  swal("Now help us to take snap of yours just by staying in room with proper light and look into the camera, sitting for a seconds.\nDon/'t worry, system will auto capture you.")
+  
+}
+</script>
+
+  
+
+</body>
+</html>
